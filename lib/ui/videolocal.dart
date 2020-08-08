@@ -12,8 +12,8 @@ class _VideoAppState extends State<VideoApp> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-      "https://my11111.s3.ap-south-1.amazonaws.com/guitarvideo.mp4",
+    _controller = VideoPlayerController.assets(
+      "videos/guitar.mp4",
     )..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
